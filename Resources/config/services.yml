@@ -1,6 +1,6 @@
 services:
     sabredav.controller:
-        class: Singalzwei\Bundle\SabreDavBundle\Controller\CalDavController
+        class: Signalzwei\Bundle\SabreDavBundle\Controller\CalDavController
         arguments: ["@sabredav.server"]
 
     sabredav.server:

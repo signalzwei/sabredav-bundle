@@ -1,9 +1,9 @@
 <?php
 
-namespace Singalzwei\SabreDavBundle;
+namespace Signalzwei\SabreDavBundle;
 
-use Singalzwei\SabreDavBundle\DependencyInjection\Compiler\CollectionPass;
-use Singalzwei\SabreDavBundle\DependencyInjection\Compiler\PluginPass;
+use Signalzwei\SabreDavBundle\DependencyInjection\Compiler\CollectionPass;
+use Signalzwei\SabreDavBundle\DependencyInjection\Compiler\PluginPass;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;

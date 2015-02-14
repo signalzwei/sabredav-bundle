@@ -1,6 +1,6 @@
 <?php
 
-namespace Agixo\Bundle\SabreDavBundle;
+namespace Signalzwei\SabreDavBundle;
 
 use Sabre\HTTP\ResponseInterface;
 use Sabre\HTTP\Sapi as SabreSapi;

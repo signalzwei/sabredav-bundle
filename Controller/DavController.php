@@ -1,7 +1,7 @@
 <?php
-namespace Singalzwei\Bundle\SabreDavBundle\Controller;
+namespace Signalzwei\Bundle\SabreDavBundle\Controller;
 
-use Singalzwei\Bundle\SabreDavBundle\Sapi;
+use Signalzwei\Bundle\SabreDavBundle\Sapi;
 use Sabre\DAV;
 use Sabre\DAVACL;
 use Sabre\CalDAV;
