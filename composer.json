@@ -1,0 +1,17 @@
+{
+  "name": "signalzwei/sabredav-bundle",
+  "description": "Integrates SabreDAV library into Symfony2",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Moritz Schwörer",
+      "email": "moritz@signalzwei.de"
+    }
+  ],
+  "require-dev": {
+    "symfony/symfony": "~2.6"
+  },
+  "require": {
+    "sabre/dav": "2.1.2"
+  }
+}

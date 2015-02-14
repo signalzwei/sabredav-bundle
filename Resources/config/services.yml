@@ -1,0 +1,34 @@
+services:
+    sabredav.controller:
+        class: Singalzwei\Bundle\SabreDavBundle\Controller\CalDavController
+        arguments: ["@sabredav.server"]
+
+    sabredav.server:
+        class: Sabre\DAV\Server
+        arguments: [[]]
+
+    sabredav.pdo:
+        class: PDO
+        arguments:
+            - "mysql:host=%database_host%;port=%database_port%;dbname=%database_name%"
+            - "%database_user%"
+            - "%database_password%"
+
+    sabredav.backend.auth.pdo:
+        class: Sabre\DAV\Auth\Backend\PDO
+        arguments: ["@sabredav.pdo"]
+
+    sabredav.backend.auth.apache:
+        class: Sabre\DAV\Auth\Backend\Apache
+
+    sabredav.backend.auth.token:
+        class: ignalzwei\SabreDavBundle\SabreDav\Auth\Backend\TokenBackend
+        arguments: ["@security.token_storage"]
+
+    sabredav.backend.principal.pdo:
+        class: Sabre\DAVACL\PrincipalBackend\PDO
+        arguments: ["@sabredav.pdo"]
+
+    sabredav.backend.caldav.pdo:
+        class: Sabre\CalDAV\Backend\PDO
+        arguments: ["@sabredav.pdo"]
