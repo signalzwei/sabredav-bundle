@@ -1,12 +1,12 @@
 <?php
-namespace Signalzwei\SabreDavBundle\SabreDav\Auth\Backend;
+namespace Signalzwei\Bundle\SabreDavBundle\SabreDav\Auth\Backend;
 
 use Sabre\DAV\Auth\Backend\BackendInterface;
 use Sabre\DAV\Exception;
 use Sabre\DAV\Server;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
-class TokenBackend implements BackendInterface
+class AuthBackend implements BackendInterface
 {
     /**
      * @var TokenStorageInterface

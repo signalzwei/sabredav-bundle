@@ -1,5 +1,5 @@
 <?php
-namespace Signalzwei\SabreDavBundle\DependencyInjection;
+namespace Signalzwei\Bundle\SabreDavBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
