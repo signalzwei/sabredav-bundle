@@ -1,4 +1,5 @@
 services:
     sabredav.plugins.caldav:
         class: Sabre\CalDAV\Plugin
-        tags: ["sabredav.plugin"]
+        tags:
+            -  { name: sabredav.plugin }

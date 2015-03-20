@@ -1,4 +1,6 @@
 services:
     sabredav.collections.calendar:
         class: Sabre\CalDAV\CalendarRootNode
-        tags: ["@sabredav.backend.principal", "@sabredav.backend.caldav"]
+        arguments: ["@sabredav.backend.principal", "@sabredav.backend.caldav"]
+        tags:
+            -  { name: sabredav.collection }

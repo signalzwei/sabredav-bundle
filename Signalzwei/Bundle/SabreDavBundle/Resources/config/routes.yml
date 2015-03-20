@@ -1,0 +1,9 @@
+dav:
+    path:     /{action}
+    defaults: { _controller: sabredav.controller:executeAction, action: "/" }
+    requirements:
+        action: ".+"
+
+dav_default:
+    path:     /
+    defaults: { _controller: sabredav.controller:executeAction, action: "/" }

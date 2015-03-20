@@ -20,6 +20,16 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
+                ->arrayNode('pdo')
+                ->addDefaultsIfNotSet()
+                    ->children()
+                        ->scalarNode('host')->defaultValue('%database_host%')->end()
+                        ->scalarNode('port')->defaultValue('3306')->end()
+                        ->scalarNode('database')->defaultValue('%database_name%')->end()
+                        ->scalarNode('user')->defaultValue('%database_user%')->end()
+                        ->scalarNode('password')->defaultValue('%database_password%')->end()
+                    ->end()
+                ->end()
                 ->arrayNode('backends')
                 ->addDefaultsIfNotSet()
                     ->children()
@@ -37,10 +47,15 @@ class Configuration implements ConfigurationInterface
                         ->booleanNode('caldav')->defaultFalse()->end()
                     ->end()
                 ->end()
-                ->arrayNode('mount')
-                    ->prototype('scalar')->end()
+                ->arrayNode('mounts')
+                ->addDefaultsIfNotSet()
+                    ->children()
+                        ->booleanNode('principal')->defaultFalse()->end()
+                        ->booleanNode('calendar')->defaultFalse()->end()
+                    ->end()
                 ->end()
             ->end();
+
         return $treeBuilder;
     }
 }

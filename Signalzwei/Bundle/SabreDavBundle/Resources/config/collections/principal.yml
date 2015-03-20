@@ -1,4 +1,6 @@
 services:
     sabredav.collections.principal:
         class: Sabre\DAVACL\PrincipalCollection
-        tags: ["@sabredav.backend.principal"]
+        arguments: ["@sabredav.backend.principal"]
+        tags:
+            -  { name: sabredav.collection }

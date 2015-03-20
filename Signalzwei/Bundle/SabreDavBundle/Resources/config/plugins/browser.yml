@@ -1,0 +1,5 @@
+services:
+    sabredav.plugins.browser:
+        class: Sabre\DAV\Browser\Plugin
+        tags:
+            -  { name: sabredav.plugin }

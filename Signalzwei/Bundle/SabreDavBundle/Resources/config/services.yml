@@ -1,7 +1,7 @@
 services:
     sabredav.controller:
-        class: Signalzwei\Bundle\SabreDavBundle\Controller\CalDavController
-        arguments: ["@sabredav.server"]
+        class: Signalzwei\Bundle\SabreDavBundle\Controller\DavController
+        arguments: ["@sabredav.server", "@logger"]
 
     sabredav.server:
         class: Sabre\DAV\Server
@@ -22,7 +22,7 @@ services:
         class: Sabre\DAV\Auth\Backend\Apache
 
     sabredav.backend.auth.token:
-        class: ignalzwei\SabreDavBundle\SabreDav\Auth\Backend\TokenBackend
+        class: Signalzwei\Bundle\SabreDavBundle\SabreDav\Auth\Backend\TokenBackend
         arguments: ["@security.token_storage"]
 
     sabredav.backend.principal.pdo:

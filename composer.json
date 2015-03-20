@@ -16,6 +16,6 @@
   },
 
   "autoload": {
-    "psr-4": { "Signalzwei\\Bundle\\SabreDavBundle\\": "" }
+    "psr-4": { "Signalzwei\\Bundle\\SabreDavBundle\\": "Signalzwei\Bundle\Sabredav" }
   }
 }

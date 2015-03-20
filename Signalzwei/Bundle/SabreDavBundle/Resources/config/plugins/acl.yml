@@ -1,5 +1,6 @@
 services:
-    sabredav.plugins.auth:
+    sabredav.plugins.acl:
         class: Sabre\DAVACL\Plugin
         arguments: ["@sabredav.backend.auth", "SabreDav"]
-        tags: ["sabredav.plugin"]
+        tags:
+            -  { name: sabredav.plugin }

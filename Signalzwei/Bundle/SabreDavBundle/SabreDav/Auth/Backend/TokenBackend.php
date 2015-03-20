@@ -1,12 +1,12 @@
 <?php
 namespace Signalzwei\Bundle\SabreDavBundle\SabreDav\Auth\Backend;
 
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Sabre\DAV\Auth\Backend\BackendInterface;
 use Sabre\DAV\Exception;
 use Sabre\DAV\Server;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
-class AuthBackend implements BackendInterface
+class TokenBackend implements BackendInterface
 {
     /**
      * @var TokenStorageInterface
@@ -39,6 +39,8 @@ class AuthBackend implements BackendInterface
      */
     public function getCurrentUser()
     {
-        return $this->tokenStorage->getToken()->getUsername();
+        if ($this->tokenStorage->getToken()) {
+            return $this->tokenStorage->getToken()->getUsername();
+        }
     }
 }
